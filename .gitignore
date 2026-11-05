@@ -1,2 +1,3 @@
 TASKS.md
 .venv/
+__pycache__/
