@@ -77,3 +77,23 @@
 - «Who is Lir Kass?» — `lir-kass.md`: Lir Kass, легендарный Senior Seeker времён Iron Dominion.
 - «What is the Void Core?» — `void-core.md`: Void Core, мобильная боевая станция.
 - «What is Edict 66?» — `edict-66.md`: секретный приказ, по которому Seeker объявлены предателями.
+
+# Задание 4. Реализация RAG-бота
+
+Скрипт `rag_bot.py` — консольный бот. Вопрос переводится в вектор той же моделью `all-MiniLM-L6-v2`, затем в `faiss.index` ищутся два ближайших чанка. Их текст вместе с двумя примерами из базы (Void Core и Lir Kass) уходит в локальную модель `Qwen2.5-0.5B-Instruct`. В системном промпте модель сначала пишет шаги, потом ответ. Если ближайший чанк слабо похож на вопрос, модель не вызывается и бот отвечает: «Я не знаю.»
+
+Запуск: `python rag_bot.py`
+
+База на английском, поэтому вопросы тоже на английском.
+
+Удачные диалоги:
+
+- What is Edict 66? Источник: `edict-66.md`. Шаги: приказ признаёт Seeker предателями Star Compact и заложен в vatguards. Ответ: Edict 66 identifies all Seekers as traitors to the Star Compact.
+- Where was Talen Voss born? Источник: `talen-voss.md`. Ответ: Talen Voss was born on the desert planet of Dunevar in the Outer Rim Territories in 41 BBY.
+- What is a fluxblade? Источник: `fluxblade.md`. Ответ: A fluxblade is a weapon used by the Seekers, Umbra, and other Synth Flux-sensitives. It has a plasma blade emitted from a usually metal hilt.
+- What is the Iron Dominion? Источник: `iron-dominion.md`. Ответ: The Iron Dominion was a totalitarian stratocratic fascist dictatorship that replaced the Star Compact at the end of the Vat Wars.
+
+Нет ответа в базе:
+
+- What is the capital of France? — Я не знаю.
+- How many employees does QuantumForge have? — Я не знаю.

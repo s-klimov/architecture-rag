@@ -2,3 +2,4 @@ langchain
 faiss-cpu
 langchain-text-splitters
 sentence-transformers
+transformers
