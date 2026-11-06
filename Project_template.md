@@ -65,3 +65,15 @@
 Скрипт `prepare_knowledge_base.py` убирает разметку и подставляет вымышленные названия из `terms_map.json`. Меняются не только имена, но и планеты, расы и техника. Например, Darth Vader становится Xarn Velgor, Death Star — Void Core, the Force — Synth Flux. Фразы остаются понятными, а по старым названиям мир уже не узнать.
 
 Результат: папка `knowledge_base/` (42 файла `.md`) и словарь `terms_map.json`.
+
+# Задание 3. Создание векторного индекса базы знаний
+
+Эмбеддинги считает локальная модель [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2). У каждого фрагмента вектор из 384 чисел.
+
+Скрипт `build_index.py` берёт 42 файла из `knowledge_base/` и режет их через `RecursiveCharacterTextSplitter` на куски примерно по 170 слов. У чанка сохраняются путь к файлу, заголовок и позиция в тексте. Векторы складываются в FAISS: индекс — `faiss.index`, тексты чанков — `chunks.json`. В индексе 147 чанков, сборка заняла около 3 секунд.
+
+Проверка поиска, по два ближайших фрагмента:
+
+- «Who is Lir Kass?» — `lir-kass.md`: Lir Kass, легендарный Senior Seeker времён Iron Dominion.
+- «What is the Void Core?» — `void-core.md`: Void Core, мобильная боевая станция.
+- «What is Edict 66?» — `edict-66.md`: секретный приказ, по которому Seeker объявлены предателями.
