@@ -37,9 +37,15 @@ def load_chunks():
     for path in sorted(KB.glob("*.md")):
         raw = path.read_text(encoding="utf-8")
         lines = raw.splitlines()
-        title = lines[0].lstrip("# ").strip()
-        # Заголовок уже есть в метаданных, в текст чанка его не кладём.
-        text = "\n".join(lines[1:]).strip()
+        # У обычных статей первая строка — заголовок. Файл без «#» берём целиком.
+        if lines and lines[0].startswith("#"):
+            title = lines[0].lstrip("# ").strip()
+            text = "\n".join(lines[1:]).strip()
+        else:
+            title = path.stem
+            text = raw.strip()
+        if not text:
+            continue
         # Смещение тела относительно начала файла, чтобы start указывал позицию в исходнике.
         body_at = raw.find(text)
         docs = SPLITTER.create_documents(
