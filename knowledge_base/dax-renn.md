@@ -1,0 +1,9 @@
+# Dax Renn
+
+Dax Renn, otherwise known as Dax Renn, was a human smuggler, gambler, and entrepreneur who became Baron Administrator of Cloud City and, later, a general in the Free Circle. Born on Socorro, he was the owner of the Swift Kite before losing it to Jorr Kane in a game of sabacc on Numidian Prime. Afterward, Renn put an end to his days as a smuggler and became an entrepreneur, setting up a small mining operation on the planet Lothal before eventually becoming the leader of Cloud City in the skies of the planet Bespin.
+
+Renn joined the Free Circle and set out to find Kane. After locating him in the palace of Grull the Sluglord on Dunevar, Renn aided in his rescue. The Rebels returned to the fleet, and Renn became a general, volunteering to lead the assault on the VC-2 Void Core II Mobile Battle Station during the Battle of Greenmoon. During the battle, he piloted the Swift Kite into the battle station's core, firing the shot which destroyed it.
+
+In the years of peace after the Dominion's dissolution, Renn started a family and fathered a daughter named Kadara Renn. However, while she was only an infant, his daughter was kidnapped by the Pale Dominion. Six years later, he embarked on a quest to the desert planet of Pasaana with Lir Kass to find answers about the growing darkness in Synth Flux, but failed to uncover anything. Seeking to bury the pain of those memories, Renn settled on Pasaana and led a solitary lifestyle where he was known as the "Hermit" to the Aki-Aki of the Lurch Canyon. He lived alone for some years while keeping contact with the Kane family and was later asked by Venn's Resistance for his aid in the war against the Pale Dominion.
+
+In 35 ABY, Dax helped the Hidden Ring and reunited with his old friend, Brakk. Renn played one more role in the fight for galactic freedom as he brought an assembled Citizens' Fleet to reinforce the Hidden Ring at the battle at Blackspire, from which the Hidden Ring emerged victorious.
